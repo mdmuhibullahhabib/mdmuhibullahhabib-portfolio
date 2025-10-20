@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ServiceHighlights() {
   return (
     <section className="service-tag py-28 px-4 md:px-12 max-w-7xl mx-auto">
-      <div className="lg:w-full">
+      <div className="md:w-full">
         {/* Title Section */}
         <div className="flex flex-wrap justify-between mb-8 gap-8">
           <h2 className="text-4xl md:text-5xl font-semibold mb-5 uppercase text-balance">

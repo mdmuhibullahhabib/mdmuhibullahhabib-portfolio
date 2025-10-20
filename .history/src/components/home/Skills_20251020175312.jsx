@@ -43,7 +43,7 @@ export default function Skills() {
   ];
 
   return (
-    <section className="relative lg:w-full overflow-hidden py-12 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <section className="relative w-full overflow-hidden py-12 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
         My <span className="text-purple-600">Skills</span>
       </h2>

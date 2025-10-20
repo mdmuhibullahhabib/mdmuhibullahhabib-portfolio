@@ -42,7 +42,7 @@ export default function Marquee() {
     ));
 
   return (
-    <div className="lg:w-full py-8 bg-white text-black">
+    <div className="md:w-full py-8 bg-white text-black">
       <hr className="border-gray-700 w-full mb-6" />
       <motion.div
         className="flex gap-10"
