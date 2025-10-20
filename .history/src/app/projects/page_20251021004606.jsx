@@ -3,6 +3,7 @@
 import { FaGithub, FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import { GoArrowUpRight } from "react-icons/go";
 
 // Fake project data
 const projects = [
@@ -84,7 +85,7 @@ export default function ProjectsPage() {
                     rel="noopener noreferrer"
                     className="text-sm px-4 py-2 border border-purple-600 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition duration-300 flex items-center gap-1"
                   >
-                    Live Project <FaArrowRight className="w-3 h-3 rotate-315" />
+                    Live Project <GoArrowUpRight className="w-3 h-3 rotate-45" />
                   </a>
 
                   <a
@@ -100,7 +101,7 @@ export default function ProjectsPage() {
                     href={`/projects/${project._id}`}
                     className="text-sm px-4 py-2 border border-gray-400 text-gray-700 rounded-full hover:border-purple-600 hover:text-white hover:bg-purple-600 transition duration-300 flex items-center gap-1"
                   >
-                    View Details <FaArrowRight className="w-3 h-3 rotate-315" />
+                    View Details <GoArrowUpRight className="w-3 h-3 rotate-45" />
                   </Link>
                 </div>
               </div>
