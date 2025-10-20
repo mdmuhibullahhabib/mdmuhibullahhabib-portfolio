@@ -92,7 +92,7 @@ export default function FeaturedWork() {
                       className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-700 rounded-full border border-gray-300 hover:bg-gray-100 transition"
                     >
                       Source Code
-                      <FaGithub className="text-gray-600 text-base" />
+                      <Fagithub className="text-gray-600 text-base" />
                     </a>
 
                     <button

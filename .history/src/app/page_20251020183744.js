@@ -17,6 +17,7 @@ export default function Home() {
       <FeaturedWork />
       <Skills />
       <ServiceHighlights />
+      <ContactCTA />
     </div>
   );
 }

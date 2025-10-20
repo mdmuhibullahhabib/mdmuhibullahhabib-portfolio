@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { GoArrowUpRight } from "react-icons/go";
-import { FaGithub } from "react-icons/fa";
+
 
 const projects = [
   {
@@ -57,7 +57,7 @@ export default function FeaturedWork() {
 
         <div className="space-y-16">
           {projects.map((project, idx) => (
-            <div key={idx} className="space-y-6">
+                 <div key={idx} className="space-y-6">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
                 {/* Project Info */}
                 <div className="md:w-1/2 space-y-4">
@@ -72,37 +72,37 @@ export default function FeaturedWork() {
                   </p>
 
                   {/* Buttons */}
-                  import {GoArrowUpRight} from "react-icons/go";
+                import { GoArrowUpRight } from "react-icons/go";
 
-                  <div className="flex flex-wrap gap-3 mt-4">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-white rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition"
-                    >
-                      Live Project
-                      <GoArrowUpRight className="text-white text-base" />
-                    </a>
+<div className="flex flex-wrap gap-3 mt-4">
+  <a
+    href={project.liveUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-white rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition"
+  >
+    Live Project
+    <GoArrowUpRight className="text-white text-base" />
+  </a>
 
-                    <a
-                      href={project.sourceUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-700 rounded-full border border-gray-300 hover:bg-gray-100 transition"
-                    >
-                      Source Code
-                      <FaGithub className="text-gray-600 text-base" />
-                    </a>
+  <a
+    href={project.sourceUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-700 rounded-full border border-gray-300 hover:bg-gray-100 transition"
+  >
+    Source Code
+    <GoArrowUpRight className="text-gray-600 text-base" />
+  </a>
 
-                    <button
-                      disabled
-                      className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-400 rounded-full border border-gray-200 cursor-not-allowed"
-                    >
-                      View Details
-                      <GoArrowUpRight className="text-gray-400 text-base" />
-                    </button>
-                  </div>
+  <button
+    disabled
+    className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-400 rounded-full border border-gray-200 cursor-not-allowed"
+  >
+    View Details
+    <GoArrowUpRight className="text-gray-400 text-base" />
+  </button>
+</div>
 
                 </div>
 
