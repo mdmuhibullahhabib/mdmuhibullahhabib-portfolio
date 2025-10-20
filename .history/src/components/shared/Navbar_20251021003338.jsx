@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop & Tablet Navbar */}
-      <nav className="max-w-xl mx-auto sticky top-4 z-50 bg-white/80 dark:bg-gray-900/70 backdrop-blur-md border border-gray-200 dark:border-gray-800 rounded-full flex items-center justify-between px-6 py-3 shadow-sm transition-all">
+      <nav className="max-w-4xl mx-auto sticky top-4 z-50 bg-white/80 dark:bg-gray-900/70 backdrop-blur-md border border-gray-200 dark:border-gray-800 rounded-full flex items-center justify-between px-6 py-3 shadow-sm transition-all">
         {/* Logo */}
         <Link
           href="/"

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const menuItems = [
   { name: "Home", path: "/" },
@@ -14,12 +14,29 @@ const menuItems = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [currmode, setCurrmode] = useState("dark");
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      if (currmode === "dark") {
+        document.body.classList.add("dark");
+        document.body.classList.remove("light");
+      } else {
+        document.body.classList.add("light");
+        document.body.classList.remove("dark");
+      }
+    }
+  }, [currmode]);
+
+  const handleToggleTheme = () => {
+    setCurrmode((prev) => (prev === "dark" ? "light" : "dark"));
+  };
 
   return (
     <>
-      {/* Desktop & Tablet Navbar */}
-      <nav className="max-w-xl mx-auto sticky top-4 z-50 bg-white/80 dark:bg-gray-900/70 backdrop-blur-md border border-gray-200 dark:border-gray-800 rounded-full flex items-center justify-between px-6 py-3 shadow-sm transition-all">
+      {/* 🌙 Desktop & Tablet Navbar */}
+      <nav className="max-w-7xl mx-auto sticky top-4 z-50 bg-white/80 dark:bg-gray-900/70 backdrop-blur-md border border-gray-200 dark:border-gray-800 rounded-full flex items-center justify-between px-6 py-3 shadow-sm transition-all">
         {/* Logo */}
         <Link
           href="/"
@@ -48,7 +65,7 @@ export default function Navbar() {
         </ul>
 
         {/* Mobile Hamburger */}
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden flex items-center gap-2">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
@@ -70,10 +87,57 @@ export default function Navbar() {
               }`}
             ></span>
           </button>
+
+          {/* Theme Toggle */}
+          <button
+            onClick={handleToggleTheme}
+            aria-label="Toggle theme"
+            className="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition active:scale-90"
+          >
+            {currmode === "dark" ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-yellow-400"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2" />
+                <path d="M12 20v2" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m17.66 17.66 1.41 1.41" />
+                <path d="M2 12h2" />
+                <path d="M20 12h2" />
+                <path d="m6.34 17.66-1.41 1.41" />
+                <path d="m19.07 4.93-1.41 1.41" />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-gray-800"
+              >
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
+            )}
+          </button>
         </div>
       </nav>
 
-      {/* Mobile Menu Drawer */}
+      {/* 📱 Mobile Menu Drawer */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm md:hidden">
           <div className="fixed top-16 left-4 right-4 bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg flex flex-col gap-4">

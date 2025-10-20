@@ -3,6 +3,13 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
+const menuItems = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Projects", path: "/projects" },
+  { name: "Blogs", path: "/blogs" },
+  { name: "Contact", path: "/contact" },
+];
 
 const socials = {
   linkedin: "https://www.linkedin.com/in/yourprofile",
@@ -33,6 +40,7 @@ export default function Footer() {
           </button>
         </Link>
       </div>
+
 
       {/* Social Links & Copyright */}
       <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 mt-10 w-full max-w-5xl border-t border-gray-200 dark:border-gray-700 pt-6">
