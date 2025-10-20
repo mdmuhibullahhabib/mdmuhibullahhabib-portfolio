@@ -3,8 +3,8 @@ import React from 'react';
 import AboutSection from "../components/home/AboutSection";
 import ContactCTA from "../components/home/ContactCTA";
 import HeroSection from "../components/home/HeroSection";
+import ProjectsSection from "../components/home/ProjectsSection";
 import Marquee from '@/components/home/Marquee';
-import FeaturedWork from '../components/home/FeaturedWork';
 
 export default function Home() {
   return (
@@ -12,8 +12,9 @@ export default function Home() {
       <HeroSection />
       <Marquee />
       <AboutSection />
-      <FeaturedWork />
+      <ProjectsSection />
       <ContactCTA />
     </div>
+
   );
 }
