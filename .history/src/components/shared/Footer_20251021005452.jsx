@@ -5,8 +5,8 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const socials = {
   linkedin: "https://www.linkedin.com/in/mdmuhibullahhabib",
-  github: "https://github.com/mdmuhibullahhabib",
-  email: "mailto:mdmuhibullahhabib6348@gmail.com",
+  github: "https://github.com/yourusername",
+  email: "mailto:youremail@example.com",
 };
 
 export default function Footer() {

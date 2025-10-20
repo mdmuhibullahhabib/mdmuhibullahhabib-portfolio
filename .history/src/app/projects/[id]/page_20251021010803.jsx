@@ -26,7 +26,7 @@ export default function ProjectDetailsPage({ project }) {
   const currentProject = project || fallbackProject; // Safe fallback
 
   return (
-    <div className="py-16 px-4 md:px-12 bg-white text-gray-900">
+    <div className="py-16 px-4 md:px-12 bg-gray-50 text-gray-900">
       <div className="max-w-5xl mx-auto flex flex-col gap-8">
         {/* Header */}
         <div className="space-y-3">

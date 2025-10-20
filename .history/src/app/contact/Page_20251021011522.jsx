@@ -1,17 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { socials } from "@/data/socials";
 import { FaGithub, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import gsap from "gsap";
-
-const socials = {
-  github: "https://github.com/sabbirosa/",
-  linkedin: "https://www.linkedin.com/in/sabbirosa/",
-  email: "mailto:sabbir0727@gmail.com",
-  instagram: "https://www.instagram.com/sabbirosa",
-  facebook: "https://www.facebook.com/sabbirbinabdullatif",
-  twitter: "https://twitter.com/sabbirosa",
-};
 
 export default function ContactPage() {
   const [messageVisible, setMessageVisible] = useState(false);

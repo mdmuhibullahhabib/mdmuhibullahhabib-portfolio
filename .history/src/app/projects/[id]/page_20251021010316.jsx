@@ -4,7 +4,7 @@ import { FaGithub, FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
-// Fake fallback data
+// Fake fallback data (development/testing purposes)
 const fallbackProject = {
   _id: "1",
   title: "Portfolio Website",
@@ -22,11 +22,24 @@ const fallbackProject = {
   year: "2024",
 };
 
-export default function ProjectDetailsPage({ project }) {
-  const currentProject = project || fallbackProject; // Safe fallback
+export default function ProjectDetailsPage({
+  project = fallbackProject, // Default to fallback if no data
+}: {
+  project?: typeof fallbackProject;
+}) {
+  if (!project) {
+    return (
+      <div className="py-16 px-4 text-center">
+        <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
+        <Link href="/projects" className="text-purple-600 hover:underline">
+          Back to Projects
+        </Link>
+      </div>
+    );
+  }
 
   return (
-    <div className="py-16 px-4 md:px-12 bg-white text-gray-900">
+    <div className="py-16 px-4 md:px-12 bg-gray-50 text-gray-900">
       <div className="max-w-5xl mx-auto flex flex-col gap-8">
         {/* Header */}
         <div className="space-y-3">
@@ -36,15 +49,15 @@ export default function ProjectDetailsPage({ project }) {
           >
             ← Back to Projects
           </Link>
-          <h1 className="text-4xl sm:text-5xl font-bold">{currentProject.title}</h1>
-          <p className="text-gray-600 text-lg">{currentProject.description}</p>
+          <h1 className="text-4xl sm:text-5xl font-bold">{project.title}</h1>
+          <p className="text-gray-600 text-lg">{project.description}</p>
         </div>
 
         {/* Project Image */}
         <div className="w-full">
           <Image
-            src={currentProject.image}
-            alt={currentProject.title}
+            src={project.image}
+            alt={project.title}
             width={1200}
             height={600}
             className="w-full rounded-lg shadow-lg object-cover"
@@ -54,17 +67,17 @@ export default function ProjectDetailsPage({ project }) {
         {/* Links */}
         <div className="flex flex-wrap gap-4">
           <a
-            href={currentProject.liveLink}
+            href={project.liveLink}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 border border-purple-600 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition"
           >
-            Live Project <FaArrowRight className="w-4 h-4 rotate-315" />
+            Live Project <FaArrowRight className="w-4 h-4 rotate-45" />
           </a>
 
-          {currentProject.codeLink && (
+          {project.codeLink && (
             <a
-              href={currentProject.codeLink}
+              href={project.codeLink}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 border border-gray-400 text-gray-700 rounded-full hover:bg-purple-600 hover:text-white transition"
@@ -75,11 +88,11 @@ export default function ProjectDetailsPage({ project }) {
         </div>
 
         {/* Tech Stack */}
-        {currentProject.techStack && (
+        {project.techStack && (
           <div>
             <h2 className="text-2xl font-semibold mb-3">Tech Stack</h2>
             <div className="flex flex-wrap gap-3">
-              {currentProject.techStack.map((tech, idx) => (
+              {project.techStack.map((tech, idx) => (
                 <span
                   key={idx}
                   className="px-4 py-2 bg-purple-200 text-purple-700 rounded-full text-sm"
@@ -92,11 +105,11 @@ export default function ProjectDetailsPage({ project }) {
         )}
 
         {/* Challenges */}
-        {currentProject.challenges && currentProject.challenges.length > 0 && (
+        {project.challenges && project.challenges.length > 0 && (
           <div>
             <h2 className="text-2xl font-semibold mb-3">Challenges</h2>
             <ul className="list-disc list-inside text-gray-600 space-y-1">
-              {currentProject.challenges.map((item, idx) => (
+              {project.challenges.map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}
             </ul>
@@ -104,11 +117,11 @@ export default function ProjectDetailsPage({ project }) {
         )}
 
         {/* Improvements */}
-        {currentProject.improvements && currentProject.improvements.length > 0 && (
+        {project.improvements && project.improvements.length > 0 && (
           <div>
             <h2 className="text-2xl font-semibold mb-3">Future Improvements</h2>
             <ul className="list-disc list-inside text-gray-600 space-y-1">
-              {currentProject.improvements.map((item, idx) => (
+              {project.improvements.map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}
             </ul>
@@ -116,9 +129,9 @@ export default function ProjectDetailsPage({ project }) {
         )}
 
         {/* Year */}
-        {currentProject.year && (
+        {project.year && (
           <div className="text-gray-500 text-sm">
-            <p>Year: {currentProject.year}</p>
+            <p>Year: {project.year}</p>
           </div>
         )}
       </div>
