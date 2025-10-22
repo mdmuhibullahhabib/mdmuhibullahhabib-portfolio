@@ -73,10 +73,10 @@ export default function ContactPage() {
               <div className="flex items-center gap-2">
                 <span>Email:</span>
                 <a
-                  href={socials.email}
+                  href={`${socials.email}`}
                   className="text-black underline hover:text-gray-600 transition"
                 >
-                  mdmuhibullahhabib6348@gmail.com
+                  {socials.email}
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -136,12 +136,13 @@ export default function ContactPage() {
             </div>
 
             {/* Map */}
-            <iframe
-              className="mt-6 w-full h-60 rounded-lg border border-gray-300"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.481923326014!2d90.35462857520405!3d23.803397286421207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0bfa91c5e23%3A0x65cb0935bcd3b6b!2sSony%20Square%2C%20Mirpur-1%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1734918123456!5m2!1sen!2sbd"
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
+         <iframe
+  className="mt-6 w-full h-60 rounded-lg border border-gray-300"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.481923326014!2d90.35462857520405!3d23.803397286421207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0bfa91c5e23%3A0x65cb0935bcd3b6b!2sSony%20Square%2C%20Mirpur-1%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1734918123456!5m2!1sen!2sbd"
+  allowFullScreen
+  loading="lazy"
+></iframe>
+
           </div>
 
           {/* Contact Form */}

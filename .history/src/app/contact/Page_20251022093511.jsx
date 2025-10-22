@@ -7,7 +7,7 @@ import gsap from "gsap";
 const socials = {
   github: "https://github.com/mdmuhibullahhabib/",
   linkedin: "https://www.linkedin.com/in/mdmuhibullahhabib/",
-  email: "mailto:mdmuhibullahhabib6348@gmail.com",
+  email: "mdmuhibullahhabib6348@gmail.com",
   // instagram: "https://www.instagram.com/sabbirosa",
   facebook: "https://www.facebook.com/mdmuhibullahhabib",
   // twitter: "https://twitter.com/sabbirosa",
@@ -76,7 +76,7 @@ export default function ContactPage() {
                   href={socials.email}
                   className="text-black underline hover:text-gray-600 transition"
                 >
-                  mdmuhibullahhabib6348@gmail.com
+                  {socials.email}
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -119,14 +119,14 @@ export default function ContactPage() {
               >
                 <FaGithub />
               </a>
-              <a
+              {/* <a
                 href={socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-black transition"
               >
                 <FaInstagram />
-              </a>
+              </a> */}
               <a
                 href={`${socials.email}`}
                 className="text-gray-500 hover:text-black transition"

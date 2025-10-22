@@ -5,12 +5,12 @@ import { FaGithub, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import gsap from "gsap";
 
 const socials = {
-  github: "https://github.com/mdmuhibullahhabib/",
-  linkedin: "https://www.linkedin.com/in/mdmuhibullahhabib/",
-  email: "mailto:mdmuhibullahhabib6348@gmail.com",
-  // instagram: "https://www.instagram.com/sabbirosa",
-  facebook: "https://www.facebook.com/mdmuhibullahhabib",
-  // twitter: "https://twitter.com/sabbirosa",
+  github: "https://github.com/sabbirosa/",
+  linkedin: "https://www.linkedin.com/in/sabbirosa/",
+  email: "mailto:sabbir0727@gmail.com",
+  instagram: "https://www.instagram.com/sabbirosa",
+  facebook: "https://www.facebook.com/sabbirbinabdullatif",
+  twitter: "https://twitter.com/sabbirosa",
 };
 
 export default function ContactPage() {
@@ -68,15 +68,15 @@ export default function ContactPage() {
             <div className="flex flex-col gap-2 text-sm mt-2">
               <div className="flex items-center gap-2">
                 <span>Location:</span>
-                <span className="text-black">Mirpur, Dhaka, Bangladesh</span>
+                <span className="text-black">Uttara, Dhaka, Bangladesh</span>
               </div>
               <div className="flex items-center gap-2">
                 <span>Email:</span>
                 <a
-                  href={socials.email}
+                  href={`mailto:${socials.email}`}
                   className="text-black underline hover:text-gray-600 transition"
                 >
-                  mdmuhibullahhabib6348@gmail.com
+                  {socials.email}
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -128,7 +128,7 @@ export default function ContactPage() {
                 <FaInstagram />
               </a>
               <a
-                href={`${socials.email}`}
+                href={`mailto:${socials.email}`}
                 className="text-gray-500 hover:text-black transition"
               >
                 <FaEnvelope />
@@ -138,7 +138,7 @@ export default function ContactPage() {
             {/* Map */}
             <iframe
               className="mt-6 w-full h-60 rounded-lg border border-gray-300"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.481923326014!2d90.35462857520405!3d23.803397286421207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0bfa91c5e23%3A0x65cb0935bcd3b6b!2sSony%20Square%2C%20Mirpur-1%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1734918123456!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29186.925161647196!2d90.378288!3d23.87664955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5d05e7074dd%3A0xd1c58803049f00c7!2sUttara%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1754917737523!5m2!1sen!2sbd"
               allowFullScreen
               loading="lazy"
             ></iframe>

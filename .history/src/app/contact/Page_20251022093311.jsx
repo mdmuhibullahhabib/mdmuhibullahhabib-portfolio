@@ -73,10 +73,10 @@ export default function ContactPage() {
               <div className="flex items-center gap-2">
                 <span>Email:</span>
                 <a
-                  href={socials.email}
+                  href={`${socials.email}
                   className="text-black underline hover:text-gray-600 transition"
                 >
-                  mdmuhibullahhabib6348@gmail.com
+                  {socials.email}
                 </a>
               </div>
               <div className="flex items-center gap-2">
