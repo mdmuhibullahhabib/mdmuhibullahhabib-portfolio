@@ -86,18 +86,16 @@ export default function FeaturedWork() {
                 </div>
 
                 {/* Image Section */}
-          <div className="md:w-1/2 flex justify-center md:justify-end">
-        <div className="relative h-[300px] w-full border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
-          {project.image && (
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-cover"
-            />
-          )}
-        </div>
-      </div>
+                <div className="md:w-1/2 flex justify-center md:justify-end">
+                  <div className="relative h-[300px] w-full border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
               </div>
               <hr className="border-gray-200" />
             </div>

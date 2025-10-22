@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+
 // Fake fallback data
 const fallbackProject = {
   _id: "1",
@@ -36,10 +37,10 @@ export default async function ProjectDetailsPage({ params }) {
         .catch((err) => console.error("Error fetching projects:", err));
     }, []);
 
-        const project = projects.find(
+        const service = projects.find(
         (item) => item.page === p.page
     );
-    console.log(project)
+    console.log(service)
 
   const currentProject = project || fallbackProject; // Safe fallback
 

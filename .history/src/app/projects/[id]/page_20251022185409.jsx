@@ -3,7 +3,6 @@
 import { FaGithub, FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 // Fake fallback data
 const fallbackProject = {
@@ -23,7 +22,7 @@ const fallbackProject = {
   year: "2024",
 };
 
-export default async function ProjectDetailsPage({ params }) {
+export default function ProjectDetailsPage({ params }) {
 
       const p = await params;
 
@@ -35,12 +34,6 @@ export default async function ProjectDetailsPage({ params }) {
         .then((data) => setProjects(data))
         .catch((err) => console.error("Error fetching projects:", err));
     }, []);
-
-        const project = projects.find(
-        (item) => item.page === p.page
-    );
-    console.log(project)
-
   const currentProject = project || fallbackProject; // Safe fallback
 
   return (

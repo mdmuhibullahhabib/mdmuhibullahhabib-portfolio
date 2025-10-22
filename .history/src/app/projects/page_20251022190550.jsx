@@ -3,7 +3,6 @@
 import { FaGithub, FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 // Fake project data
 const projects = [
@@ -46,8 +45,7 @@ export default function ProjectsPage() {
         .then((data) => setProjects(data))
         .catch((err) => console.error("Error fetching projects:", err));
     }, []);
-    console.log(projects)
-
+    
   return (
     <div className="py-16 px-4 md:px-12 bg-gray-50 text-gray-900">
       <div className="max-w-6xl mx-auto">

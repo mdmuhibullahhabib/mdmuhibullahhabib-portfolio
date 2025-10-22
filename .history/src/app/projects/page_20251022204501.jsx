@@ -46,7 +46,7 @@ export default function ProjectsPage() {
         .then((data) => setProjects(data))
         .catch((err) => console.error("Error fetching projects:", err));
     }, []);
-    console.log(projects)
+    console.log(project)
 
   return (
     <div className="py-16 px-4 md:px-12 bg-gray-50 text-gray-900">
