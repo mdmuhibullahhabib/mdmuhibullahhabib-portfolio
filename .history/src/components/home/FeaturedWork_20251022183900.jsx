@@ -57,7 +57,7 @@ export default function FeaturedWork() {
         {/* Buttons */}
         <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
           <a
-            href={project.liveLink}
+            href={project.livelink}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-white rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition"
@@ -67,7 +67,7 @@ export default function FeaturedWork() {
           </a>
 
           <a
-            href={project.codeLink}
+            href={project.sourceUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-700 rounded-full border border-gray-300 hover:bg-gray-100 transition"
@@ -89,7 +89,7 @@ export default function FeaturedWork() {
       <div className="md:w-1/2 flex justify-center md:justify-end">
         <div className="relative h-[300px] w-full border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
           <Image
-            src={project.image || <h2>haua<h2/> }
+            src={project.image }
             alt={project.title}
             fill
             className="object-cover"

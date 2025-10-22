@@ -89,7 +89,7 @@ export default function FeaturedWork() {
       <div className="md:w-1/2 flex justify-center md:justify-end">
         <div className="relative h-[300px] w-full border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
           <Image
-            src={project.image || <h2>haua<h2/> }
+            src={project.image || <h2><h2/ }
             alt={project.title}
             fill
             className="object-cover"

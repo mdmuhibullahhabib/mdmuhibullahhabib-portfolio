@@ -67,7 +67,7 @@ export default function FeaturedWork() {
           </a>
 
           <a
-            href={project.codeLink}
+            href={project.sou}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-700 rounded-full border border-gray-300 hover:bg-gray-100 transition"
@@ -89,7 +89,7 @@ export default function FeaturedWork() {
       <div className="md:w-1/2 flex justify-center md:justify-end">
         <div className="relative h-[300px] w-full border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
           <Image
-            src={project.image || <h2>haua<h2/> }
+            src={project.image }
             alt={project.title}
             fill
             className="object-cover"
