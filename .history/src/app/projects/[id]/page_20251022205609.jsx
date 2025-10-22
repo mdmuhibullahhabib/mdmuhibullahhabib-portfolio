@@ -10,7 +10,7 @@ const fallbackProject = {
   title: "Portfolio Website",
   description:
     "A personal portfolio website showcasing projects and skills with Next.js and TailwindCSS.",
-  image: "https://i.ibb.co/FLBHPsf1/weboria.png",
+  image: "https://via.placeholder.com/1200x600.png?text=Portfolio+Website",
   liveLink: "https://example.com/portfolio",
   codeLink: "https://github.com/username/portfolio",
   techStack: ["Next.js", "React", "TailwindCSS", "TypeScript", "Vercel"],
