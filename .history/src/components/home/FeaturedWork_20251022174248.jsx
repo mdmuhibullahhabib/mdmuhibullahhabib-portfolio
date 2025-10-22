@@ -5,6 +5,28 @@ import { GoArrowUpRight } from "react-icons/go";
 import { FaArrowRight, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
+const projects = [
+  {
+    title: "Aloron",
+    number: "01",
+    description:
+      "Educational platform focused on HSC and university admission preparation. Includes interactive MCQ practice, subject-wise progress tracking, leaderboard, and responsive UI for students. Built with Next.js, MongoDB, and Firebase Auth.",
+    liveUrl: "https://aloron.netlify.app/",
+    sourceUrl: "https://github.com/mdmuhibullahhabib/aloron",
+    imageUrl: "https://i.ibb.co/BV8WCDzH/aloron.png",
+  },
+  {
+    title: "Weboria",
+    number: "02",
+    description:
+      "Professional portfolio and project showcase website built with Next.js and Framer Motion. Features modern animations, responsive design, smooth scroll effects, and dynamic project display — optimized for performance and SEO.",
+    liveUrl: "https://weboria-rho.vercel.app/",
+    sourceUrl: "https://github.com/mdmuhibullahhabib/weboria",
+    imageUrl: "https://i.ibb.co/FLBHPsf1/weboria.png",
+  },
+];
+
+
 export default function FeaturedWork() {
   const [projects, setProjects] = useState([]);
 

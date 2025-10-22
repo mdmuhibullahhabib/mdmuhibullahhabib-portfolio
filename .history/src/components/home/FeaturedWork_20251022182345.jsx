@@ -5,6 +5,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import { FaArrowRight, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
+
 export default function FeaturedWork() {
   const [projects, setProjects] = useState([]);
 
