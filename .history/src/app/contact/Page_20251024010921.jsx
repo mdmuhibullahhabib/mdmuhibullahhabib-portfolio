@@ -53,7 +53,7 @@ export default function ContactPage() {
   };
 
   return (
-    <section id="contact" className="w-full pt-10 px-4 bg-white text-black">
+    <section id="contact" className="w-full pt-16 px-4 bg-white text-black">
       <div ref={textRef} className="max-w-5xl mx-auto">
         {/* Header */}
         <h2 className="text-lg text-purple-600 mb-2">Let's talk</h2>
