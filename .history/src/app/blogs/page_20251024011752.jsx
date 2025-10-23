@@ -108,6 +108,7 @@ export default function BlogsPage() {
             </article>
           ))}
         </div>
+
         {/* No blogs fallback */}
         {blogs.length === 0 && (
           <p className="text-center text-gray-400 py-10">No blog posts found.</p>
