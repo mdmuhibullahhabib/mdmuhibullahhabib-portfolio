@@ -5,24 +5,38 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+// ✅ Fallback data (when API fails)
+const fallbackProject = {
+  title: "Portfolio Website",
+  description:
+    "A personal portfolio website showcasing projects and skills with Next.js and TailwindCSS.",
+  image: "https://i.ibb.co/FLBHPsf1/weboria.png",
+  liveLink: "https://example.com/portfolio",
+  codeLink: "https://github.com/username/portfolio",
+  techStack: ["Next.js", "React", "TailwindCSS", "TypeScript", "Vercel"],
+  challenges: [
+    "Learning Next.js and SSR concepts",
+    "Designing responsive UI with TailwindCSS",
+  ],
+  improvements: ["Add dark mode toggle", "Integrate CMS for dynamic content"],
+  year: "2024",
+};
 
-export default async function ProjectDetailsPage({ params }) {
+export default function ProjectDetailsPage({ params }) {
   // 🔧 useState and useEffect are client-side hooks, so the component cannot be async
   const [projects, setProjects] = useState([]);
-  const [currentProject, setCurrentProject] = useState({});
+  const [currentProject, setCurrentProject] = useState(fallbackProject);
 
-    const p = await params;
-
-  //  Fetch data from API once component mounts
+  // ✅ Fetch data from API once component mounts
   useEffect(() => {
     fetch("/api/projects")
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);
 
-        // Safely get project based on dynamic route param
+        // ✅ Safely get project based on dynamic route param
         const foundProject = data.find(
-          (item) => item._id === p?.id 
+          (item) => item._id === params?.id || item.page === params?.page
         );
 
         if (foundProject) {

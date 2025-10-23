@@ -27,11 +27,11 @@ export default function Skills() {
     // { id: 32, name: "Flask", image: "/images/Logos/Flask.svg" },
 
     // Databases & ORM
-    // { id: 40, name: "PostgreSQL", image: "/images/Logos/PostgreSQL.svg" },
+    { id: 40, name: "PostgreSQL", image: "/images/Logos/PostgreSQL.svg" },
     { id: 41, name: "MySQL", image: "/images/Logos/MySQL.svg" },
     { id: 42, name: "MongoDB", image: "/images/Logos/MongoDB.svg" },
     { id: 44, name: "Mongoose", image: "/images/Logos/Mongoose.svg" },
-    // { id: 45, name: "SQLAlchemy", image: "/images/Logos/SQLAlchemy.svg" },
+    { id: 45, name: "SQLAlchemy", image: "/images/Logos/SQLAlchemy.svg" },
 
     // Cloud, DevOps & Deployment
     { id: 50, name: "Firebase", image: "/images/Logos/Firebase.svg" },
@@ -39,7 +39,7 @@ export default function Skills() {
 
     // Tools
     { id: 60, name: "Git", image: "/images/Logos/GIT.svg" },
-    // { id: 62, name: "Postman", image: "/images/Logos/Postman.svg" },
+    { id: 62, name: "Postman", image: "/images/Logos/Postman.svg" },
   ];
 
   return (

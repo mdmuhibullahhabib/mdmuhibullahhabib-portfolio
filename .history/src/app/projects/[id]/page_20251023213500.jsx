@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 
-export default async function ProjectDetailsPage({ params }) {
+export default function ProjectDetailsPage({ params }) {
   // 🔧 useState and useEffect are client-side hooks, so the component cannot be async
   const [projects, setProjects] = useState([]);
   const [currentProject, setCurrentProject] = useState({});
@@ -20,9 +20,9 @@ export default async function ProjectDetailsPage({ params }) {
       .then((data) => {
         setProjects(data);
 
-        // Safely get project based on dynamic route param
+        // ✅ Safely get project based on dynamic route param
         const foundProject = data.find(
-          (item) => item._id === p?.id 
+          (item) => item._id === params?.id || item.page === params?.page
         );
 
         if (foundProject) {

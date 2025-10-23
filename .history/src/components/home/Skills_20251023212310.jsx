@@ -39,7 +39,7 @@ export default function Skills() {
 
     // Tools
     { id: 60, name: "Git", image: "/images/Logos/GIT.svg" },
-    // { id: 62, name: "Postman", image: "/images/Logos/Postman.svg" },
+    { id: 62, name: "Postman", image: "/images/Logos/Postman.svg" },
   ];
 
   return (

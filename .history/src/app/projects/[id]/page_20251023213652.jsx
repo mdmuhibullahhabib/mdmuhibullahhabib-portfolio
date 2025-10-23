@@ -20,9 +20,9 @@ export default async function ProjectDetailsPage({ params }) {
       .then((data) => {
         setProjects(data);
 
-        // Safely get project based on dynamic route param
+        // ✅ Safely get project based on dynamic route param
         const foundProject = data.find(
-          (item) => item._id === p?.id 
+          (item) => item._id === p?.id || item.page === params?.page
         );
 
         if (foundProject) {

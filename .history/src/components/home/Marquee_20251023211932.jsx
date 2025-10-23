@@ -52,7 +52,7 @@ export default function Marquee() {
         {renderItems("primary")}
         {renderItems("dup")}
       </motion.div>
-      <hr className="border-gray-700 lg:w-full mt-6" />
+      <hr className="border-gray-700 w-full mt-6" />
     </div>
   );
 }
