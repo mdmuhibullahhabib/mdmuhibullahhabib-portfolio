@@ -1,54 +1,41 @@
-"use client"; // ✅ ক্লায়েন্ট কম্পোনেন্ট ঘোষণা
+"use client";
 
 import { FaGithub, FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-// 🧩 ❌ আগে async function ছিল — এখন async সরিয়ে ফেললাম
-// কারণ React Hook async component এর ভিতরে কাজ করে না
-export default function ProjectDetailsPage({ params }) {
-  // ✅ Hooks এখন সঠিকভাবে কাজ করবে
+
+export default async function ProjectDetailsPage({ params }) {
+  // 🔧 useState and useEffect are client-side hooks, so the component cannot be async
   const [projects, setProjects] = useState([]);
-  const [currentProject, setCurrentProject] = useState(null);
+  const [currentProject, setCurrentProject] = useState({});
 
-  // ✅ params destructure করা হয়েছে, async-await বাদ
-  const { id } = params;
+    const p = await params;
 
-  // ✅ useEffect সঠিকভাবে ব্যবহার
+  //  Fetch data from API once component mounts
   useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const res = await fetch("/api/projects");
-        const data = await res.json();
+    fetch("/api/projects")
+      .then((res) => res.json())
+      .then((data) => {
         setProjects(data);
 
-        // ✅ সঠিকভাবে project খোঁজা হচ্ছে
-        const foundProject = data.find((item) => item._id === id);
+        // Safely get project based on dynamic route param
+        const foundProject = data.find(
+          (item) => item._id === p?.id 
+        );
+
         if (foundProject) {
           setCurrentProject(foundProject);
         }
-      } catch (err) {
-        console.error("Error fetching projects:", err);
-      }
-    };
-
-    fetchProjects();
-  }, [id]);
-
-  // ✅ fallback system — যদি এখনো ডেটা না আসে
-  if (!currentProject) {
-    return (
-      <div className="p-12 text-center text-gray-500">
-        Loading project details...
-      </div>
-    );
-  }
+      })
+      .catch((err) => console.error("Error fetching projects:", err));
+  }, [params]);
 
   return (
     <div className="py-16 px-4 md:px-12 bg-white text-gray-900">
       <div className="max-w-5xl mx-auto flex flex-col gap-8">
-        {/* 🔹 Header Section */}
+        {/* Header Section */}
         <div className="space-y-3">
           <Link href="/projects" className="text-purple-600 hover:underline">
             ← Back to Projects
@@ -59,7 +46,7 @@ export default function ProjectDetailsPage({ params }) {
           <p className="text-gray-600 text-lg">{currentProject.description}</p>
         </div>
 
-        {/* 🔹 Project Image */}
+        {/* Project Image */}
         {currentProject.image && (
           <div className="w-full">
             <Image
@@ -72,7 +59,7 @@ export default function ProjectDetailsPage({ params }) {
           </div>
         )}
 
-        {/* 🔹 Buttons */}
+        {/* Action Buttons */}
         <div className="flex flex-wrap gap-4">
           {currentProject.liveLink && (
             <a
@@ -84,6 +71,7 @@ export default function ProjectDetailsPage({ params }) {
               Live Project <FaArrowRight className="w-4 h-4 rotate-315" />
             </a>
           )}
+
           {currentProject.codeLink && (
             <a
               href={currentProject.codeLink}
@@ -96,7 +84,7 @@ export default function ProjectDetailsPage({ params }) {
           )}
         </div>
 
-        {/* 🔹 Tech Stack */}
+        {/* Tech Stack */}
         {currentProject.techStack?.length > 0 && (
           <div>
             <h2 className="text-2xl font-semibold mb-3">Tech Stack</h2>
@@ -113,7 +101,7 @@ export default function ProjectDetailsPage({ params }) {
           </div>
         )}
 
-        {/* 🔹 Challenges */}
+        {/* Challenges */}
         {currentProject.challenges?.length > 0 && (
           <div>
             <h2 className="text-2xl font-semibold mb-3">Challenges</h2>
@@ -125,7 +113,7 @@ export default function ProjectDetailsPage({ params }) {
           </div>
         )}
 
-        {/* 🔹 Future Improvements */}
+        {/* Future Improvements */}
         {currentProject.improvements?.length > 0 && (
           <div>
             <h2 className="text-2xl font-semibold mb-3">Future Improvements</h2>
@@ -137,7 +125,7 @@ export default function ProjectDetailsPage({ params }) {
           </div>
         )}
 
-        {/* 🔹 Year */}
+        {/* Year */}
         {currentProject.year && (
           <div className="text-gray-500 text-sm">
             <p>Year: {currentProject.year}</p>
