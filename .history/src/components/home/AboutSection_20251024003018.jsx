@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section className="bg-white text-black py-16 px-4 sm:px-6 lg:px-12 overflow-x-hidden">
+    <section className="bg-white text-black py-16 px-4 sm:px-6 lg:px-12">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
 
         {/* Left Column (Text Section) */}
@@ -36,6 +36,7 @@ export default function AboutSection() {
             create impactful web solutions.
           </p>
 
+          {/* 🔹 MARK: Learn More Button responsive */}
           <Link
             href="/about"
             className="inline-block w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition duration-300 text-center"
@@ -51,7 +52,8 @@ export default function AboutSection() {
           transition={{ duration: 0.8 }}
           className="md:w-1/2 flex justify-center mt-8 md:mt-0"
         >
-          <div className="w-full max-w-full sm:max-w-md md:max-w-lg rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+          {/* 🔹 MARK: Video responsive with max-width for mobile */}
+          <div className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
             <video
               className="w-full h-auto rounded-2xl"
               autoPlay

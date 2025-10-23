@@ -4,6 +4,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
+    // 🔹 MARK: Add overflow-x-hidden to prevent horizontal scroll
     <section className="bg-white text-black py-16 px-4 sm:px-6 lg:px-12 overflow-x-hidden">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
 

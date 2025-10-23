@@ -21,7 +21,7 @@ export default function FeaturedWork() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* 🔹 Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-12">
-          <div className="text-left">
+          <div className="text-center md:text-left">
             <h2 className="text-3xl sm:text-4xl font-bold mb-3">
               FEATURED WORK
             </h2>
@@ -46,7 +46,7 @@ export default function FeaturedWork() {
             <div key={idx} className="space-y-8">
               <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 {/* Left Info Section */}
-                <div className="w-full md:w-1/2 text-left space-y-4 flex flex-col justify-center">
+                <div className="w-full md:w-1/2 text-center md:text-left space-y-4 flex flex-col justify-center">
                   <h3 className="text-2xl sm:text-3xl font-semibold">
                     {project.title}{" "}
                     <span className="text-gray-400 font-normal text-base">
@@ -58,7 +58,7 @@ export default function FeaturedWork() {
                   </p>
 
                   {/* 🔘 Buttons */}
-                  <div className="flex flex-wrap justify-start gap-3 mt-4">
+                  <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
                     {/* Live Project */}
                     <a
                       href={project.liveLink}

@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function AboutSection() {
+
   return (
-    <section className="bg-white text-black py-16 px-4 sm:px-6 lg:px-12 overflow-x-hidden">
-      <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+    <section className="bg-white text-black py-16 px-4 sm:px-6 lg:px-12">
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
 
         {/* Left Column (Text Section) */}
         <motion.div
@@ -14,11 +15,11 @@ export default function AboutSection() {
           transition={{ duration: 0.8 }}
           className="md:w-1/2 text-center md:text-left"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-800 mb-4 sm:mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-800 mb-6 leading-tight">
             About Me
           </h2>
 
-          <p className="text-gray-700 text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed">
+          <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
             I am a passionate{" "}
             <span className="font-semibold text-blue-600">full-stack developer</span> skilled in{" "}
             <span className="font-semibold text-blue-600">Next.js, React, Node.js, and Express.js</span>.
@@ -29,16 +30,17 @@ export default function AboutSection() {
             with <span className="font-semibold text-blue-600">MySQL & MongoDB</span>.
           </p>
 
-          <p className="text-gray-700 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
+          <p className="text-gray-700 text-base sm:text-lg mb-8 leading-relaxed">
             I focus on building clean, responsive, and user-friendly interfaces with{" "}
             <span className="font-semibold text-blue-600">TailwindCSS</span> and modern design principles.
             Currently, I’m open to freelance, internships, and collaborative projects that challenge me to
             create impactful web solutions.
           </p>
 
+          {/* Learn More Button */}
           <Link
             href="/about"
-            className="inline-block w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition duration-300 text-center"
+            className="inline-block px-6 sm:px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition duration-300"
           >
             Learn More
           </Link>
@@ -49,9 +51,9 @@ export default function AboutSection() {
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="md:w-1/2 flex justify-center mt-8 md:mt-0"
+          className="md:w-1/2 flex justify-center"
         >
-          <div className="w-full max-w-full sm:max-w-md md:max-w-lg rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+          <div className="w-full max-w-sm sm:max-w-md rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
             <video
               className="w-full h-auto rounded-2xl"
               autoPlay
