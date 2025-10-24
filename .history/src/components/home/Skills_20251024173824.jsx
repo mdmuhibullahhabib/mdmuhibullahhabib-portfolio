@@ -8,7 +8,7 @@ export default function Skills() {
     // { id: 1, name: "Python", image: "/images/Logos/Python.svg" },
     { id: 2, name: "JavaScript", image: "/images/Logos/JavaScript.svg" },
     // { id: 3, name: "TypeScript", image: "/images/Logos/TypeScript.svg" },
-    // { id: 4, name: "SQL", image: "/images/Logos/PostgreSQL.svg" },
+    { id: 4, name: "SQL", image: "/images/Logos/PostgreSQL.svg" },
 
     // Frontend
     { id: 10, name: "React", image: "/images/Logos/React.js.svg" },
@@ -43,49 +43,55 @@ export default function Skills() {
   ];
 
   return (
-  <section className="relative w-full py-10 overflow-hidden bg-white text-black">
+  <section className="relative w-full overflow-hidden py-10 bg-white text-black">
       <hr className="border-[#E2E8F0] w-full mb-6" />
 
+      {/* Scrolling Container */}
       <div className="overflow-hidden w-full">
-        <div className="whitespace-nowrap py-10">
-          <div className="flex animate-scroll">
-            {/* Original skill set */}
-            {skills.map((skill) => (
-              <div
-                key={skill.id}
-                className="skills flex items-center gap-2 px-10 py-2 mx-3 shadow-sm bg-white border border-gray-200 rounded-full"
-              >
-                <Image
-                  src={skill.image}
-                  alt={skill.name}
-                  width={20}
-                  height={20}
-                />
-                <span className="text-sm font-medium">{skill.name}</span>
-              </div>
-            ))}
+        <div className="whitespace-nowrap py-6 flex animate-scroll">
+          {/* Original set */}
+          {skills.map((skill) => (
+            <div
+              key={skill.id}
+              className="skills flex items-center gap-2 px-6 py-2 mx-3 shadow-sm bg-white rounded-full border border-gray-200 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+            >
+              <Image
+                src={skill.image}
+                alt={skill.name}
+                width={24}
+                height={24}
+                className="object-contain"
+              />
+              <span className="text-sm sm:text-base font-medium text-gray-800">
+                {skill.name}
+              </span>
+            </div>
+          ))}
 
-            {/* Duplicate set for seamless infinite scroll */}
-            {skills.map((skill, index) => (
-              <div
-                key={`dup-${index}`}
-                className="skills flex items-center gap-2 px-6 py-2 mx-3 shadow-sm bg-white border border-gray-200 rounded-full"
-              >
-                <Image
-                  src={skill.image}
-                  alt={skill.name}
-                  width={20}
-                  height={20}
-                />
-                <span className="text-sm font-medium">{skill.name}</span>
-              </div>
-            ))}
-          </div>
+          {/* Duplicate set for infinite loop */}
+          {skills.map((skill, index) => (
+            <div
+              key={`dup-${index}`}
+              className="skills flex items-center gap-2 px-6 py-2 mx-3 shadow-sm bg-white rounded-full border border-gray-200 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+            >
+              <Image
+                src={skill.image}
+                alt={skill.name}
+                width={24}
+                height={24}
+                className="object-contain"
+              />
+              <span className="text-sm sm:text-base font-medium text-gray-800">
+                {skill.name}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Animation Styles */}
       <style jsx>{`
+        /* Continuous right → left scroll */
         @keyframes scroll {
           0% {
             transform: translateX(0);
@@ -96,8 +102,8 @@ export default function Skills() {
         }
 
         .animate-scroll {
-          display: inline-flex;
           animation: scroll 40s linear infinite;
+          display: inline-flex;
         }
 
         @media (max-width: 768px) {

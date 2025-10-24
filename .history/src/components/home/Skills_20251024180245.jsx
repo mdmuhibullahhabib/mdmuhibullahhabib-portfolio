@@ -43,7 +43,7 @@ export default function Skills() {
   ];
 
   return (
-  <section className="relative w-full py-10 overflow-hidden bg-white text-black">
+  <section className="relative w-full py- overflow-hidden bg-white text-black">
       <hr className="border-[#E2E8F0] w-full mb-6" />
 
       <div className="overflow-hidden w-full">

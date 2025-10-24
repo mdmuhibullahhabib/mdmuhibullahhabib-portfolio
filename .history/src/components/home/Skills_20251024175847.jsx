@@ -8,7 +8,7 @@ export default function Skills() {
     // { id: 1, name: "Python", image: "/images/Logos/Python.svg" },
     { id: 2, name: "JavaScript", image: "/images/Logos/JavaScript.svg" },
     // { id: 3, name: "TypeScript", image: "/images/Logos/TypeScript.svg" },
-    // { id: 4, name: "SQL", image: "/images/Logos/PostgreSQL.svg" },
+    { id: 4, name: "SQL", image: "/images/Logos/PostgreSQL.svg" },
 
     // Frontend
     { id: 10, name: "React", image: "/images/Logos/React.js.svg" },
@@ -43,7 +43,7 @@ export default function Skills() {
   ];
 
   return (
-  <section className="relative w-full py-10 overflow-hidden bg-white text-black">
+   <section className="relative w-full overflow-hidden bg-white text-black">
       <hr className="border-[#E2E8F0] w-full mb-6" />
 
       <div className="overflow-hidden w-full">
@@ -53,38 +53,43 @@ export default function Skills() {
             {skills.map((skill) => (
               <div
                 key={skill.id}
-                className="skills flex items-center gap-2 px-10 py-2 mx-3 shadow-sm bg-white border border-gray-200 rounded-full"
+                className="flex items-center gap-2 px-5 py-3 mx-3 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md transition-all duration-300"
               >
                 <Image
                   src={skill.image}
                   alt={skill.name}
-                  width={20}
-                  height={20}
+                  width={22}
+                  height={22}
+                  className="object-contain"
                 />
-                <span className="text-sm font-medium">{skill.name}</span>
+                <span className="text-[15px] font-medium text-gray-700">
+                  {skill.name}
+                </span>
               </div>
             ))}
 
-            {/* Duplicate set for seamless infinite scroll */}
+            {/* Duplicate for seamless animation */}
             {skills.map((skill, index) => (
               <div
                 key={`dup-${index}`}
-                className="skills flex items-center gap-2 px-6 py-2 mx-3 shadow-sm bg-white border border-gray-200 rounded-full"
+                className="flex items-center gap-2 px-5 py-3 mx-3 bg-white border border-gray-200 rounded-full shadow-sm"
               >
                 <Image
                   src={skill.image}
                   alt={skill.name}
-                  width={20}
-                  height={20}
+                  width={22}
+                  height={22}
+                  className="object-contain"
                 />
-                <span className="text-sm font-medium">{skill.name}</span>
+                <span className="text-[15px] font-medium text-gray-700">
+                  {skill.name}
+                </span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Animation Styles */}
       <style jsx>{`
         @keyframes scroll {
           0% {
@@ -97,12 +102,16 @@ export default function Skills() {
 
         .animate-scroll {
           display: inline-flex;
-          animation: scroll 40s linear infinite;
+          animation: scroll 45s linear infinite;
+        }
+
+        .animate-scroll:hover {
+          animation-play-state: paused;
         }
 
         @media (max-width: 768px) {
           .animate-scroll {
-            animation-duration: 60s;
+            animation-duration: 65s;
           }
         }
       `}</style>

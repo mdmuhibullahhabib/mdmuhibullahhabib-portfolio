@@ -8,7 +8,7 @@ export default function Skills() {
     // { id: 1, name: "Python", image: "/images/Logos/Python.svg" },
     { id: 2, name: "JavaScript", image: "/images/Logos/JavaScript.svg" },
     // { id: 3, name: "TypeScript", image: "/images/Logos/TypeScript.svg" },
-    // { id: 4, name: "SQL", image: "/images/Logos/PostgreSQL.svg" },
+    { id: 4, name: "SQL", image: "/images/Logos/PostgreSQL.svg" },
 
     // Frontend
     { id: 10, name: "React", image: "/images/Logos/React.js.svg" },
@@ -43,41 +43,50 @@ export default function Skills() {
   ];
 
   return (
-  <section className="relative w-full py-10 overflow-hidden bg-white text-black">
+   <section className="relative w-full overflow-hidden py-10 bg-white text-black">
       <hr className="border-[#E2E8F0] w-full mb-6" />
 
       <div className="overflow-hidden w-full">
-        <div className="whitespace-nowrap py-10">
-          <div className="flex animate-scroll">
-            {/* Original skill set */}
+        <div
+          className="whitespace-nowrap py-6 animate-scroll-rtl"
+          id="scrolling-container"
+        >
+          <div className="flex" id="text-container">
+            {/* First Row */}
             {skills.map((skill) => (
               <div
                 key={skill.id}
-                className="skills flex items-center gap-2 px-10 py-2 mx-3 shadow-sm bg-white border border-gray-200 rounded-full"
+                className="skills flex items-center gap-2 px-6 py-2 mx-3 shadow-sm bg-white rounded-full border border-gray-200 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
               >
                 <Image
                   src={skill.image}
                   alt={skill.name}
-                  width={20}
-                  height={20}
+                  width={24}
+                  height={24}
+                  className="object-contain"
                 />
-                <span className="text-sm font-medium">{skill.name}</span>
+                <span className="text-sm sm:text-base font-medium text-gray-800">
+                  {skill.name}
+                </span>
               </div>
             ))}
 
-            {/* Duplicate set for seamless infinite scroll */}
+            {/* Duplicate for seamless loop */}
             {skills.map((skill, index) => (
               <div
                 key={`dup-${index}`}
-                className="skills flex items-center gap-2 px-6 py-2 mx-3 shadow-sm bg-white border border-gray-200 rounded-full"
+                className="skills flex items-center gap-2 px-6 py-2 mx-3 shadow-sm bg-white rounded-full border border-gray-200 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
               >
                 <Image
                   src={skill.image}
                   alt={skill.name}
-                  width={20}
-                  height={20}
+                  width={24}
+                  height={24}
+                  className="object-contain"
                 />
-                <span className="text-sm font-medium">{skill.name}</span>
+                <span className="text-sm sm:text-base font-medium text-gray-800">
+                  {skill.name}
+                </span>
               </div>
             ))}
           </div>
@@ -86,23 +95,24 @@ export default function Skills() {
 
       {/* Animation Styles */}
       <style jsx>{`
-        @keyframes scroll {
+        /* Smooth Right to Left Scroll */
+        @keyframes scroll-rtl {
           0% {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(50%);
           }
         }
 
-        .animate-scroll {
-          display: inline-flex;
-          animation: scroll 40s linear infinite;
+        .animate-scroll-rtl {
+          display: inline-block;
+          animation: scroll-rtl 35s linear infinite;
         }
 
         @media (max-width: 768px) {
-          .animate-scroll {
-            animation-duration: 60s;
+          .animate-scroll-rtl {
+            animation-duration: 50s;
           }
         }
       `}</style>

@@ -13,7 +13,7 @@ export default function HeroSection() {
     ];
 
     return (
-        <section className="bg-white pt-6 min-h-screen flex items-center">
+        <section className="bg-white pt- min-h-screen flex items-center">
             <div className="container mx-auto px-6 md:flex md:items-center md:justify-between">
 
                 {/* Left Text Column */}

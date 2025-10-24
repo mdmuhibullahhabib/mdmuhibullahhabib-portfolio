@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section className="bg-white text-black py-8 px-4 sm:px-6 lg:px-12 overflow-x-hidden">
+    <section className="bg-white text-black pt-18 pb- px-4 sm:px-6 lg:px-12 overflow-x-hidden">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
 
         {/* Left Column (Text Section) */}

@@ -8,7 +8,7 @@ export default function Skills() {
     // { id: 1, name: "Python", image: "/images/Logos/Python.svg" },
     { id: 2, name: "JavaScript", image: "/images/Logos/JavaScript.svg" },
     // { id: 3, name: "TypeScript", image: "/images/Logos/TypeScript.svg" },
-    // { id: 4, name: "SQL", image: "/images/Logos/PostgreSQL.svg" },
+    { id: 4, name: "SQL", image: "/images/Logos/PostgreSQL.svg" },
 
     // Frontend
     { id: 10, name: "React", image: "/images/Logos/React.js.svg" },
@@ -43,7 +43,7 @@ export default function Skills() {
   ];
 
   return (
-  <section className="relative w-full py-10 overflow-hidden bg-white text-black">
+  <section className="relative w-full overflow-hidden bg-white text-black">
       <hr className="border-[#E2E8F0] w-full mb-6" />
 
       <div className="overflow-hidden w-full">
@@ -53,7 +53,7 @@ export default function Skills() {
             {skills.map((skill) => (
               <div
                 key={skill.id}
-                className="skills flex items-center gap-2 px-10 py-2 mx-3 shadow-sm bg-white border border-gray-200 rounded-full"
+                className="skills flex items-center gap-2 px-6 py-2 mx-3 shadow-sm bg-white border border-gray-200 rounded-full"
               >
                 <Image
                   src={skill.image}
