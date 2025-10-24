@@ -43,8 +43,8 @@ export default function Skills() {
   ];
 
   return (
-  <section className="relative w-full py-6 pb-10 overflow-hidden bg-white text-black">
-      <hr className="border-[#E2E8F0] w-full mb-6" />
+  <section className="relative w-full pb-10 overflow-hidden bg-white text-black">
+      {/* <hr className="border-[#E2E8F0] w-full mb-6" /> */}
 
       <div className="overflow-hidden w-full">
         <div className="whitespace-nowrap py-10">

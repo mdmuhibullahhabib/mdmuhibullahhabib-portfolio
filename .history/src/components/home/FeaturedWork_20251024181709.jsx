@@ -118,23 +118,22 @@ export default function FeaturedWork() {
               <hr className="border-gray-200" />
             </div>
           ))}
-
-          <div className="flex justify-center">
-            <a
-              href="https://github.com/mdmuhibullahhabib"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button
-                type="button"
-                className="btn bg-white text-black-400 hover:text-white rounded-full px-5 text-sm 
+                  <div className="flex justify-center">
+          <a
+            href="https://github.com/sabbirosa"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button
+              type="button"
+              className="btn bg-[#222] text-gray-400 hover:text-white rounded-full px-5 py-3 text-sm 
               hover:bg-[#1E1E1E] transition-all cursor-pointer inline-flex items-center gap-1 shadow-lg"
-              >
-                More projects on
-                <FaGithub className="h-5 w-5" />
-              </button>
-            </a>
-          </div>
+            >
+              More projects on
+              <FaGithub className="h-5 w-5" />
+            </button>
+          </a>
+        </div>
         </div>
       </div>
     </section>
