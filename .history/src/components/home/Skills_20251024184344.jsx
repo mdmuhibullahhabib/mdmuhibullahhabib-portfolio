@@ -97,12 +97,12 @@ export default function Skills() {
 
         .animate-scroll {
           display: inline-flex;
-          animation: scroll 25s linear infinite;
+          animation: scroll 30s linear infinite;
         }
 
         @media (max-width: 768px) {
           .animate-scroll {
-            animation-duration: 60s;
+            animation-duration: 10s;
           }
         }
       `}</style>

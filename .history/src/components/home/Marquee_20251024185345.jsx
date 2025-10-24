@@ -17,25 +17,27 @@ const expertiseItems = [
 ];
 
 export default function Marquee() {
+  //  Animation for smooth horizontal scroll
   const scroll = {
     animate: {
-      x: ["0%", "-100%"], 
+      x: ["0%", "-50%"],
       transition: {
         x: {
           repeat: Infinity,
           repeatType: "loop",
-          duration: 15, 
+          duration: 3, 
           ease: "linear",
         },
       },
     },
   };
 
+  //  Each item render with proper spacing
   const renderItems = (prefix = "") =>
     expertiseItems.map((item, idx) => (
       <div
         key={`${prefix}-${idx}`}
-        className="flex items-center gap-3 sm:gap-5 whitespace-nowrap text-sm sm:text-base md:text-lg"
+        className="flex items-center gap-2 sm:gap-3 whitespace-nowrap text-sm sm:text-base md:text-lg"
       >
         <Star className="text-purple-500 shrink-0" size={16} />
         <span>{item}</span>
@@ -44,12 +46,12 @@ export default function Marquee() {
 
   return (
     <div className="w-full overflow-hidden py-6 sm:py-8 bg-white text-black">
-      {/* Top Border */}
+      {/* Decorative Top Border */}
       <hr className="border-gray-300 w-full mb-4 sm:mb-6" />
 
-      {/* Smooth scrolling row */}
+      {/* Animated scrolling row */}
       <motion.div
-        className="flex gap-6 sm:gap-10 whitespace-nowrap"
+        className="flex gap-6 sm:gap-10"
         variants={scroll}
         animate="animate"
       >
@@ -57,7 +59,7 @@ export default function Marquee() {
         {renderItems("dup")}
       </motion.div>
 
-      {/* Bottom Border */}
+      {/* Decorative Bottom Border */}
       <hr className="border-gray-300 w-full mt-4 sm:mt-6" />
     </div>
   );

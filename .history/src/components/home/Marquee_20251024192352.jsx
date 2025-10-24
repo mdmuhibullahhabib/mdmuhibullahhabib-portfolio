@@ -17,14 +17,15 @@ const expertiseItems = [
 ];
 
 export default function Marquee() {
+  // Faster smooth horizontal scroll
   const scroll = {
     animate: {
-      x: ["0%", "-100%"], 
+      x: ["0%", "-100%"], // Scroll fully to left
       transition: {
         x: {
           repeat: Infinity,
           repeatType: "loop",
-          duration: 15, 
+          duration: 1, // Faster than before
           ease: "linear",
         },
       },
@@ -47,7 +48,7 @@ export default function Marquee() {
       {/* Top Border */}
       <hr className="border-gray-300 w-full mb-4 sm:mb-6" />
 
-      {/* Smooth scrolling row */}
+      {/* Scrolling Row */}
       <motion.div
         className="flex gap-6 sm:gap-10 whitespace-nowrap"
         variants={scroll}

@@ -19,7 +19,7 @@ const expertiseItems = [
 export default function Marquee() {
   const scroll = {
     animate: {
-      x: ["0%", "-100%"], 
+      x: ["0%", "-50%"], 
       transition: {
         x: {
           repeat: Infinity,

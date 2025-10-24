@@ -17,14 +17,15 @@ const expertiseItems = [
 ];
 
 export default function Marquee() {
+  // Smooth horizontal scroll, slightly slower and fully visible
   const scroll = {
     animate: {
-      x: ["0%", "-100%"], 
+      x: ["0%", "-100%"], // Move full width
       transition: {
         x: {
           repeat: Infinity,
           repeatType: "loop",
-          duration: 15, 
+          duration: 15, // Slower for smoothness
           ease: "linear",
         },
       },

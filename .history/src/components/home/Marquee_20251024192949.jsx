@@ -17,6 +17,7 @@ const expertiseItems = [
 ];
 
 export default function Marquee() {
+  // Smooth horizontal scroll, slightly slower and fully visible
   const scroll = {
     animate: {
       x: ["0%", "-100%"], 
