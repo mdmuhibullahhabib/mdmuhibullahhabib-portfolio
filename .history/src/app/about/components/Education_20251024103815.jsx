@@ -8,10 +8,11 @@ export default function Education() {
       year: "July 2023 - Present",
     },
     {
-      "degree": "Complete Web Development Course",
-      "institution": "Programming Hero",
-      "year": "July 2024 - December 2024",
-    },
+  "degree": "Complete Web Development Course",
+  "institution": "Programming Hero",
+  "year": "Jan 2024 - Jun 2024",
+  "description": "A comprehensive web development bootcamp focused on building full-stack applications using the MERN stack. Covered front-end and back-end technologies, authentication, database management, and deployment. Completed multiple real-world projects and assignments under mentorship."
+},
     // {
     //   degree: "Higher Secondary Certificate (Science)",
     //   institution: "Uttara High School & College, Dhaka",
@@ -31,7 +32,7 @@ export default function Education() {
         {/* Left Section */}
         <div className="lg:w-2/5">
           <h2 className="text-lg mb-3 text-purple-600 flex items-center gap-2 font-semibold uppercase tracking-wide">
-            <span className="text-xl">*</span>
+            <span className="text-xl">*</span> 
             Education
           </h2>
           <h3 className="text-4xl sm:text-5xl md:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">

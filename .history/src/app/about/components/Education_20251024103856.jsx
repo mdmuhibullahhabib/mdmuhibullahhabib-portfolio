@@ -10,7 +10,7 @@ export default function Education() {
     {
       "degree": "Complete Web Development Course",
       "institution": "Programming Hero",
-      "year": "July 2024 - December 2024",
+      "year": "Ju 2024 - Jun 2024",
     },
     // {
     //   degree: "Higher Secondary Certificate (Science)",

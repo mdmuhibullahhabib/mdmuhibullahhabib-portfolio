@@ -11,7 +11,7 @@ const socials = {
 
 export default function Footer() {
   return (
-    <footer className="py-4 px-4 sm:px-6 md:px-14 bg-white text-gray-900 flex flex-col items-center">
+    <footer className="py-8 px-4 sm:px-6 md:px-14 bg-white text-gray-900 flex flex-col items-center">
       {/* Call to Action Box */}
       <div className="bg-white shadow-lg rounded-3xl py-12 px-4 sm:px-8 md:py-16 md:px-10 flex flex-col items-center justify-center text-center w-full max-w-5xl transition-all hover:shadow-2xl duration-300 border border-gray-200">
         <p className="inline-flex items-center px-4 py-2 bg-purple-50 text-purple-700 rounded-full text-sm mb-4 relative">

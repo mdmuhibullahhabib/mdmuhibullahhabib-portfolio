@@ -43,7 +43,7 @@ export default function Skills() {
   ];
 
   return (
- <section className="relative w-full overflow-hidden py-5 bg-white text-black">
+ <section className="relative w-full overflow-hidden py- bg-white text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-3xl sm:text-4xl font-bold mb-10 text-gray-900">
           My Skills

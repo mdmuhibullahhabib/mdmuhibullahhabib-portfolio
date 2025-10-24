@@ -10,7 +10,8 @@ export default function Education() {
     {
       "degree": "Complete Web Development Course",
       "institution": "Programming Hero",
-      "year": "July 2024 - December 2024",
+      "year": "Jan 2024 - Jun 2024",
+      "description": "A comprehensive web development bootcamp focused on building full-stack applications using the MERN stack. Covered front-end and back-end technologies, authentication, database management, and deployment. Completed multiple real-world projects and assignments under mentorship."
     },
     // {
     //   degree: "Higher Secondary Certificate (Science)",
