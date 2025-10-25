@@ -28,9 +28,8 @@ export default function HeroSection() {
 
                     {/* Download Resume Button */}
                     <a
-                        href="https://drive.google.com/uc?export=download&id=1x52SA_2aHWYbSbGxLysPHori5E0lniVO"
+                        href="/resume.pdf" // আপনার resume path দিন
                         className="inline-flex items-center px-6 py-3 border-2 border-purple-600 text-purple-600 rounded-full font-medium hover:bg-purple-600 hover:text-white transition duration-300 mb-6"
-                        download
                     >
                         Download Resume <ArrowDown className="ml-2 w-5 h-5" />
                     </a>

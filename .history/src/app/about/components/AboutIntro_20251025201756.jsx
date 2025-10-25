@@ -25,8 +25,7 @@ export default function AboutIntro() {
             </p>
 
             <a
-              href="https://drive.google.com/uc?export=download&id=1x52SA_2aHWYbSbGxLysPHori5E0lniVO"
-              download="Md. Muhib Ullah Habib Resume"
+  href="https://drive.google.com/uc?export=download&id=1x52SA_2aHWYbSbGxLysPHori5E0lniVO"              download="Sabbir Bin Abdul Latif's Resume"
             >
               <button className="border border-black px-6 py-3 rounded-full cursor-pointer hover:bg-black hover:text-white transition duration-300 ease-in-out text-sm sm:text-base">
                 My Resume
